@@ -14,6 +14,9 @@ var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "?", "[", "]"];
 
 console.log(numbers);
+console.log(lowercase);
+console.log(uppercase);
+console.log(specialCharacters);
 
 function generatePassword() {
     var passwordLength = prompt("Choose a password length between 8 and 128 characters")
@@ -31,28 +34,29 @@ function generatePassword() {
             category = Math.floor(Math.random() * 4)
             console.log(category)
             if (category === 0 && wantNumbers) {
-                password += numbers[Math.floor(Math.random() * numbers.length)]
+                password += numbers[Math.floor(Math.random() * numbers.length)];
             } else if (category === 1 && wantLowerCase) {
-                password += lowercase[Math.floor(Math.random() * lowercase.length)]
-            } else if (category === 1 && wantUpperCase) {
-                password += uppercase[Math.floor(Math.random() * uppercase.length)]
-            } else if (category === 1 && wantSpecialCharacters) {
-                password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
+                password += lowercase[Math.floor(Math.random() * lowercase.length)];
+            } else if (category === 2 && wantUpperCase) {
+                password += uppercase[Math.floor(Math.random() * uppercase.length)];
+            } else if (category === 3 && wantSpecialCharacters) {
+                password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
             }
-
-            document.getElementById('generatedPassword').textContent = password;
-        } else {
-            alert('Invalid Length')
         }
-
-        // console.log(wantNumbers);
-
-        // console.log(wantUpperCase);
     }
 
+    else {
+        alert("Invalid Length")
+    }
+
+    // console.log(wantNumbers);
+
+    // console.log(wantUpperCase);
+
+
+    document.getElementById('generatedPassword').textContent = password;
     var passwordBtn = document.getElementById('passwordButton');
     passwordBtn.addEventListener('click', function () {
         generatePassword()
     })
-
-
+}
