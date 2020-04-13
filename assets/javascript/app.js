@@ -27,21 +27,21 @@ function generatePassword() {
         //var wantSpecialCharacters = confirm("Do you want to special characters?");
         //var wantUpperCase = confirm("Do you want to uppercase characters?");
 
-            // generate password
-            while (password.length < passwordLength) {
-                category = Math.floor(Math.random() * 4)
-                console.log(category)
-                if (category === 0 && wantNumbers) {
-                    password += numbers[Math.floor(Math.random() * numbers.length)];
-                } else if (category === 1 && wantLowerCase) {
-                    password += lowercase[Math.floor(Math.random() * lowercase.length)];
-                } else if (category === 2 && wantUpperCase) {
-                    password += uppercase[Math.floor(Math.random() * uppercase.length)];
-                } else if (category === 3 && wantSpecialCharacters) {
-                    password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
-                }
+        // generate password
+        while (password.length < passwordLength) {
+            category = Math.floor(Math.random() * 4)
+            console.log(category)
+            if (category === 0 && wantNumbers) {
+                password += numbers[Math.floor(Math.random() * numbers.length)];
+            } else if (category === 1 && wantLowerCase) {
+                password += lowercase[Math.floor(Math.random() * lowercase.length)];
+            } else if (category === 2 && wantUpperCase) {
+                password += uppercase[Math.floor(Math.random() * uppercase.length)];
+            } else if (category === 3 && wantSpecialCharacters) {
+                password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
             }
-    
+        }
+
     }
 
     else {
