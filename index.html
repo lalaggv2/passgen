@@ -12,12 +12,27 @@
 
 <body>
 
-    <div class="container">
-        <h1>Password Generator</h1>
-        <div id="generatedPassword"></div>
-        <button id="passwordButton">
-            Create Password
-        </button>
+    <div id="wrapper">
+
+        <div class="card">
+            <h1>Password Generator</h1>
+            <div>
+                <h5 class="card-title">Generate a secure password</h5>
+                <p class="card-text" id="generatedPassword">Having a secure password is the best protection against
+                    hackers. Your new password will show up HERE.</p>
+                <p class="card-text" id="quote">"A strong password provides essential protection from financial fraud
+                    and identity theft.
+                    One of the
+                    most
+                    common ways that hackers break into computers is by guessing passwords. Simple and commonly used
+                    passwords enable intruders to easily gain access and control of a computing device."
+                    <a href="https://www.securedatarecovery.com/resources/the-importance-of-strong-secure-passwords">
+                        Securedatarecovery.com</a> </p>
+
+                <button class="btn btn-primary" id="passwordButton">Create Password</button>
+
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

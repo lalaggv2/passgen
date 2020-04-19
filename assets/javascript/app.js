@@ -1,23 +1,10 @@
-// WHEN prompted for character types to include in the password
-// THEN I choose lowercase, uppercase, numeric, and/or special characters
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
 
 
-// Check if any of the options are selected
-// if none are tell the user they need at least one
-// else create the password
-//
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "?", "[", "]"];
 
-var bank = "abcdefABCD" // => "hello" => ["h","e","l","l","o"]
 console.log(numbers);
 console.log(lowercase);
 console.log(uppercase);
