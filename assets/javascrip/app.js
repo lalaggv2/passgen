@@ -22,9 +22,9 @@ function generatePassword() {
     if (passwordLength >= 8 && passwordLength <= 128) {
 
         var wantNumbers = confirm("Do you want it to contain numbers?");
-        var wantLowerCase = confirm("Do you want to lowercase characters?");
-        var wantUpperCase = confirm("Do you want to uppercase characters?");
-        var wantSpecialCharacters = confirm("Do you want to special characters?");
+        var wantLowerCase = confirm("Do you want to use lowercase characters?");
+        var wantUpperCase = confirm("Do you want to use uppercase characters?");
+        var wantSpecialCharacters = confirm("Do you want to use special characters?");
 
         // generate password
         while (password.length < passwordLength) {
